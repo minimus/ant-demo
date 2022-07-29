@@ -5,6 +5,10 @@ export interface IResponseData {
     userId: number;
 }
 
+export interface IResponseDataKey extends IResponseData {
+    key: number;
+}
+
 export interface IColumns {
     title: string;
     dataIndex: string;

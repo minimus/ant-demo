@@ -5,13 +5,5 @@ export interface IResponseData {
     userId: number;
 }
 
-export interface IResponseDataKey extends IResponseData {
-    key: number;
-}
-
-export interface IColumns {
-    title: string;
-    dataIndex: string;
-    key: string;
-}
+export type TColumnFilters = Array<{ text: JSX.Element, value: number | string | boolean }>
 

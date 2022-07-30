@@ -1,12 +1,12 @@
-import axios from "axios";
-import { IResponseData, IResponseDataKey } from "../types/data";
+import axios from 'axios'
+import { IResponseData } from '../types/data'
 
-export const getData = async (): Promise<IResponseDataKey[]> => {
+export const getData = async (): Promise<IResponseData[]> => {
     try {
-        const { data, status } = await axios.get('https://jsonplaceholder.typicode.com/posts');
-        if (status === 200) return data.map((item: IResponseData) => ({ key: item.id, ...item }));
-        return [];
+        const { data, status } = await axios.get('https://jsonplaceholder.typicode.com/posts')
+        if (status === 200) return data
+        return []
     } catch (e: unknown) {
-        return [];
+        return []
     }
 }
